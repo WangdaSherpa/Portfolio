@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>WANGDA | SHERPA</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <style>
+            .first-grid i.fa {
+                font-size: 22px;
+                padding: 3%;
+                background-color: none;
+                margin: 2%;
+                cursor: pointer;
+                border: 2px solid #bebebe;
+                border-radius: 70%;
+                color: #bebebe;
+            }
+
+            .first-grid i.fa:hover {
+                cursor: pointer;
+                border: 2px solid #fff;
+                color: #fff;
+            }
+
+            #W {
+                color: #13005A;
+            }
+
+            #A {
+                color: #00337C;
+            }
+
+            #N {
+                color: #1C82AD;
+            }
+
+            #G {
+                color: #03C988;
+            }
+
+            #D {
+                color: #6096B4;
+            }
+
+            #L-A {
+                color: #93BFCF;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://kit.fontawesome.com/14c15912a3.js" crossorigin="anonymous"></script>
+        <div class="container contact">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html">
+                        <span id="W">W</span>
+                        <span id="A">A</span>
+                        <span id="N">N</span>
+                        <span id="G">G</span><br>
+                        <span id="D">D</span>
+                        <span id="L-A">A</span>
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_me.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+                <!-- <label id="icon">
+                                                          <i class="fas fa-bars"></i>
+                                                        </label> -->
+            </div>
+            <div class="contact-main">
+                <h2>Contact Me</h2>
+                <p>Drop your quiries below</p>
+                <div class="first-grid">
+                    <div class="information">
+                        <i class="fa fa-map-marker"></i>
+                        <span class="contact-info">06 Kapan Kathmandu</span><br>
+                        <i class="fa fa-phone"></i>
+                        <span class="contact-info">Phone no +977 0000000098</span><br>
+                        <i class="fa fa-envelope"></i>
+                        <span class="contact-info">wangdalove2060@gmail.com</span>
+                    </div>
+                    <div class="form">
+                        <form method="post" name="submit-to-google-sheet">
+                            <input type="text" name="First_Name" placeholder="First Name" required>
+                            <input type="text" name="Last_Name" placeholder="Last Name" required>
+                            <input type="email" name="Email" placeholder="Email" required>
+                            <input type="text" placeholder="Subject" required>
+                            <textarea name="Message" rows="5" placeholder="Your message here..." required></textarea>
+                            <button class="submit">Send Message</button>
+                        </form>
+                        <span id="sent-msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100074122840702">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/w_a_n_g_d_a/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://mail.google.com/mail/u/1/#inbox?compose=jrjtXVbHQHzHlrdwBWkmnFlcSWkhtnpdBnzHDQZvjglDnMRgnscrLncttLQPrlHDXLVCNTTq"></i>
+                        <i class="fa-regular fa-envelope"></i>
+                    </li>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/wangda-sherpa-27048825a/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+        <p>Copyright © 2023 wangdasherpa.com</p>
+    </body>
+</html></div></div><script>const scriptURL = 'https://script.google.com/macros/s/AKfycbwE87a31P0n0giYkWrqVoawkU7tJjEI_vVv2K7PSZreGhq6YXWgY8zjnFwrAKsVuxr7/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("sent-msg")
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+    }).then(response => {
+        msg.innerHTML = "Successfully Sent"
+        setTimeout(function () {
+            msg.innerHTML = ""
+        }, 3000)
+        form.reset()
+    }).catch(error => console.error('Error!', error.message))
+})</script></body></html>
